@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "axaml-inspector": {
+      "type": "local",
+      "command": "node",
+      "args": ["tools/axaml-inspector/server.mjs"],
+      "tools": ["*"]
+    }
+  }
+}

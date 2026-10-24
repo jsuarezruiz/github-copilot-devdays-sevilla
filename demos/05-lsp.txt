@@ -1,0 +1,32 @@
+DEMO 5 · Language server
+Project ~/copilot-talk/05-lsp · slides 18-19 · slot 1.5 min
+================================================================
+
+FILE TO SHOW
+.github/lsp.json
+
+BEFORE THE TALK
+Run this demo once: the first run downloads the C# language server (needs the .NET 10 SDK).
+
+STEPS
+1. In the app, pick 05-lsp and press ⌘N.
+2. First time only: answer A to "Trust this repository?", then press ⌘N again.
+3. Paste the prompt.
+
+PROMPT
+Where is UseCopilotAvalonia defined and who calls it? Use the language server, not a text search.
+
+YOU SHOULD SEE (about 16 s)
+Lsp steps (workspaceSymbol, then findReferences). Defined in
+src/Copilot.Avalonia.AppHost/AppBuilderExtensions.cs line 16, called from
+src/SampleApp/Program.cs line 19.
+
+CONTRAST (terminal): the same word as plain text, 13 lines in 7 files
+git -C ~/copilot-talk/05-lsp grep -n UseCopilotAvalonia
+
+IF IT GOES WRONG
+The first call fails with "transport framing error": normal on a cold start, the agent
+retries and succeeds.
+
+FALLBACK (images/ in the talk repo)
+demo5-lsp.png, demo5-lsp.gif

@@ -1,0 +1,29 @@
+DEMO 2 · Skill
+Project ~/copilot-talk/02-skill · slides 9-10 · slot 2 min
+================================================================
+
+FILE TO SHOW
+.github/skills/avalonia-automation-ids/SKILL.md
+
+STEPS
+1. In the app, pick 02-skill and press ⌘N.
+2. First time only: answer A to "Trust this repository?", then press ⌘N again.
+3. Paste the prompt.
+
+PROMPT
+Use the /avalonia-automation-ids skill to review src/SampleApp.
+
+YOU SHOULD SEE (about 25 s)
+"Loaded skill avalonia-automation-ids", then a table of the five menu items that have
+no AutomationId, each with a proposed id: FileMenu, ExitMenu, ViewMenu, LightThemeMenu,
+DarkThemeMenu.
+
+DO NOT CONFIRM THE EDIT
+The skill asks before editing. With a question card, press Esc (Skip) or choose
+"Leave files unchanged". With a plain-text question, just don't answer it.
+
+RESET (terminal, only if the agent edited files)
+git -C ~/copilot-talk/02-skill reset -q --hard && git -C ~/copilot-talk/02-skill clean -fdq
+
+FALLBACK (images/ in the talk repo)
+demo2-skill-table.png, demo2-skill-question.png, demo2-skill-summary.png, demo2-skill.gif

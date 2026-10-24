@@ -1,0 +1,38 @@
+DEMO 1 · Instructions
+Project ~/copilot-talk/01-instructions · slides 7-8 · slot 2 min
+================================================================
+
+FILES TO SHOW
+.github/copilot-instructions.md
+.github/instructions/axaml.instructions.md
+
+STEPS
+1. In the app, pick 01-instructions and press ⌘N.
+2. First time only: answer A to "Trust this repository?", then press ⌘N again.
+3. Paste the same prompt as in demo 0.
+
+PROMPT
+What rules should I follow when I change the UI in this repo? Answer in at most five short bullets.
+
+YOU SHOULD SEE (about 25 s)
+The team's rules: every interactive control has Name and a matching
+AutomationProperties.AutomationId, PascalCase ids that end with the control type,
+never change an existing AutomationId, visible text in English, and
+dotnet build src/SampleApp/SampleApp.csproj after a change.
+
+OPTIONAL SECOND PROMPT: the Clear button
+Add a Clear button to SampleApp that empties the name and the greeting. Check that it works.
+
+The code can look like demo 0's, but now the final message cites the AutomationId rule
+and the build command.
+
+RESET (terminal, after the Clear button)
+git -C ~/copilot-talk/01-instructions reset -q --hard && git -C ~/copilot-talk/01-instructions clean -fdq
+
+IF IT GOES WRONG
+The agent says it got no instructions: check that you answered the trust prompt and
+that the session is new. Then ask:
+Without using any tools, quote verbatim the repository instructions you were given for this project about naming controls and AutomationId.
+
+FALLBACK (images/ in the talk repo)
+demo1-instructions.png, demo1-instructions.gif, demo1-rules.png

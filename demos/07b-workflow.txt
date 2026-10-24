@@ -1,0 +1,35 @@
+DEMO 7B · Multi-model workflow
+Project ~/copilot-talk/07b-workflow · slides 26-27 · slot 3 min
+================================================================
+
+FILES TO SHOW
+.github/extensions/plan-code-review/extension.mjs
+.github/agents/  (planner, coder and reviewer, the same as in demo 3b)
+
+STEPS
+1. In the app, pick 07b-workflow and press ⌘N. Keep the default agent.
+2. Accept the repository prompt with A, then press ⌘N again.
+3. Paste the prompt. If the app asks for permission to run the workflow, approve it.
+4. The chat looks idle after about 15 s while the workflow runs: wait for the summary.
+5. Click the "Dynamic workflows" chip above the prompt box (right of Changes) to show
+   the run.
+
+PROMPT
+Run the plan-code-review workflow with the task: add a Reset button next to SampleApp's counter that sets it to zero.
+
+YOU SHOULD SEE (about 1 min 45 s)
+"Listed available workflows", a plan-code-review run, then a summary: the reviewer
+approved and nothing was escalated (planner 10 s, coder 23 s, reviewer 56 s).
+
+RESET (terminal, always: the coder edits files)
+git -C ~/copilot-talk/07b-workflow reset -q --hard && git -C ~/copilot-talk/07b-workflow clean -fdq
+
+OUTSIDE THE APP (for the slide, not needed on stage)
+copilot workflow run plan-code-review
+
+IF IT GOES WRONG
+The escalation model gpt-6-luna isn't on your account: change ESCALATION_MODEL in the
+extension. A phase doesn't start: edit the model field of that agent file.
+
+FALLBACK (images/ in the talk repo)
+demo7b-workflow.png, demo7b-workflow-popover.png, demo7b-workflow.gif

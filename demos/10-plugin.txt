@@ -1,0 +1,44 @@
+DEMO 10 · Plugin
+Project ~/copilot-talk/00-baseline (it has no skill and no agent) · slides 36-37 · slot 3 min
+================================================================
+
+FILES TO SHOW (in the talk repo)
+demos/10-plugin/avalonia-kit/plugin.json
+.github/plugin/marketplace.json
+
+BEFORE THE SESSION (terminal)
+If demo 0 ran the Clear button, reset its folder first:
+git -C ~/copilot-talk/00-baseline reset -q --hard && git -C ~/copilot-talk/00-baseline clean -fdq
+
+Add the talk repo as a marketplace and install the plugin from it:
+cd <talk repo> && copilot plugin marketplace add .
+copilot plugin install avalonia-kit@devdays-sevilla
+
+It prints "Installed 1 skill" (the count only includes skills; the agent comes too).
+
+STEPS
+1. In the app, pick 00-baseline and start a NEW session with ⌘N.
+2. Paste prompt 1, then prompt 2.
+
+PROMPT 1: the plugin's skill
+Use the /avalonia-automation-ids skill to review src/SampleApp.
+
+YOU SHOULD SEE (about 37 s)
+"Loaded skill avalonia-automation-ids" although the repo has none, and the same table of
+five menu items as in demo 2. If it ends with a question, press Esc.
+
+PROMPT 2: the plugin's agent
+Use the avalonia-ui-tester agent to design the test plan for SampleApp's main screen, in English.
+
+YOU SHOULD SEE (about 37 s)
+The agent running as a subagent, named avalonia-kit:avalonia-ui-tester.
+
+AFTER THE DEMO (terminal)
+copilot plugin uninstall avalonia-kit
+copilot plugin marketplace remove devdays-sevilla
+
+Uninstalling only disables the plugin and leaves "avalonia-kit@devdays-sevilla": false
+in ~/.copilot/settings.json. Don't delete that file: it holds your other plugins.
+
+FALLBACK (images/ in the talk repo)
+demo10-plugin.png (skill), demo10-plugin-agent.png (agent), demo10-plugin.gif

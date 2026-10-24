@@ -1,0 +1,28 @@
+DEMO 7 · SDK extension
+Project ~/copilot-talk/07-extension · slides 22-25 · slot 1.5 min
+================================================================
+
+FILE TO SHOW
+.github/extensions/avalonia-tools/extension.mjs
+
+STEPS
+1. In the app, pick 07-extension and press ⌘N.
+2. Accept the repository prompt with A, then press ⌘N again.
+3. The session shows "avalonia-tools loaded: avalonia_project_info available."
+4. Paste the prompt.
+
+PROMPT
+Is src/SampleApp ready to open in a canvas?
+
+YOU SHOULD SEE (about 6 s)
+One avalonia_project_info step, then: ready, net8.0, Avalonia 11.3.*, no problems.
+Nobody told the agent to use the tool: the extension's hook added that context because
+the prompt says "canvas".
+
+OPTIONAL (if time is left)
+Comment out .UseCopilotAvalonia() in src/SampleApp/Program.cs, start a new session and
+ask again: the tool reports the problem. Then reset:
+git -C ~/copilot-talk/07-extension reset -q --hard
+
+FALLBACK (images/ in the talk repo)
+demo7-extension.png, demo7-extension.gif

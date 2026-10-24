@@ -1,0 +1,39 @@
+DEMO 4 · MCP server
+Project ~/copilot-talk/04-mcp · slides 16-17 · slot 2 min
+================================================================
+
+FILES TO SHOW
+.mcp.json
+tools/axaml-inspector/server.mjs
+
+BEFORE THE SESSION (terminal)
+The app does not load the repo's .mcp.json, so add the server to your user config:
+copilot mcp add axaml-inspector -- node ~/copilot-talk/04-mcp/tools/axaml-inspector/server.mjs
+
+STEPS
+1. Run the command above first: a session started before it doesn't see the server.
+2. In the app, pick 04-mcp and press ⌘N.
+3. First time only: answer A to "Trust this repository?", then press ⌘N again.
+4. Paste the prompt.
+
+PROMPT
+Which SampleApp controls have no AutomationId? Use axaml-inspector.
+
+YOU SHOULD SEE (about 10 s)
+A step called "Axaml Inspector · Find Missing Automation Ids" (a native MCP call), then
+the five menu items with their lines. The names keep their access keys, as in the AXAML:
+_File, E_xit, _View, _Light theme, _Dark theme.
+
+AFTER THE DEMO (terminal, so the tool doesn't appear in other demos)
+copilot mcp remove axaml-inspector
+
+OPTIONAL: SHOW THE PROTOCOL (terminal)
+cd ~/copilot-talk/04-mcp && printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{}}' '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"find_missing_automation_ids","arguments":{}}}' | node tools/axaml-inspector/server.mjs 2>/dev/null
+
+IF IT GOES WRONG
+"The axaml-inspector tool isn't available here": the session is older than the command,
+or the command did not run. Check with: copilot mcp list
+Then start a new session.
+
+FALLBACK (images/ in the talk repo)
+demo4-mcp-native.png (demo4-mcp-via-shell.png and .gif are an older run through the shell)

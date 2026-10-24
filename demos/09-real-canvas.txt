@@ -1,0 +1,40 @@
+DEMO 9 · The agent drives a desktop app
+Project ~/copilot-talk/09-real-canvas · slides 31-35 · slot 3 min
+================================================================
+
+FILES TO SHOW
+.github/extensions/copilot-avalonia/   (the real canvas, from copilot-avalonia)
+.github/extensions/ui-test-plan/       (the demo 8 canvas)
+
+BEFORE THE TALK
+Build the app once so it starts fast:
+dotnet build ~/copilot-talk/09-real-canvas/src/SampleApp
+
+STEPS
+1. In the app, pick 09-real-canvas and press ⌘N.
+2. Accept the repository prompt with A, then press ⌘N again.
+3. Paste prompt 1 to open the test plan canvas.
+4. Paste prompt 2. When the purple "Agent has control" banner shows, click
+   "Take back control" to show that you can.
+5. Switch to the "UI test plan" tab and click "Ask Copilot to run it".
+
+PROMPT 1: the test plan
+Open the UI test plan canvas with three cases for SampleApp: the greeting, the counter and the dark theme.
+
+PROMPT 2: the real app (give the name: with "my name" the agent guesses one)
+Open the Copilot.Avalonia canvas for src/SampleApp, enter the name Javier, click Greet, and tell me what appears.
+
+YOU SHOULD SEE
+After prompt 2 (about 34 s): a second tab with the running app. The agent calls
+get_state, acquire_control, find_control, fill_control and tap_control. Answer:
+"Hello, Javier!".
+After the button (about 46 s): a message "Run the test plan in canvas …" that nobody
+typed, then the agent runs the three cases in the app (counter, dark theme, a screenshot)
+and marks each one passed with a note.
+
+PLAN B (terminal): run the app in canvas mode and open the URL it prints
+cd ~/copilot-talk/09-real-canvas && dotnet run --project src/SampleApp --launch-profile Canvas
+
+FALLBACK (images/ in the talk repo)
+demo9-canvas.png, demo9-canvas.gif, demo9-plan-run.png, demo9-plan-run.gif,
+demo9-plan-run-button.png

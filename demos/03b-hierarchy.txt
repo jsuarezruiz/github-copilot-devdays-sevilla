@@ -1,0 +1,39 @@
+DEMO 3B · One model per role
+Project ~/copilot-talk/03b-hierarchy · slides 13-15 · slot 3 min
+================================================================
+
+FILES TO SHOW
+.github/agents/orchestrator.agent.md
+.github/agents/planner.agent.md    (model: claude-sonnet-5.5)
+.github/agents/coder.agent.md      (model: gpt-5.3-codex)
+.github/agents/reviewer.agent.md   (model: gemini-3.8-flash)
+
+STEPS
+1. In the app, pick 03b-hierarchy and press ⌘N.
+2. First time only: answer A to "Trust this repository?", then press ⌘N again.
+3. Send Hi, wait for the reply, then type the agent command and press Enter.
+   The chip lists: Default agent, coder, orchestrator, planner, reviewer.
+4. Paste the prompt and explain the hierarchy while it runs.
+
+FIRST MESSAGE
+Hi
+
+AGENT COMMAND
+/agent orchestrator
+
+PROMPT
+Add a Reset button next to SampleApp's counter that sets it to zero.
+
+YOU SHOULD SEE (about 2 min)
+Three subagents in order, Planner, Coder and Reviewer, each with its time, then a table
+with the three models and the verdict (PASS in the last run).
+
+RESET (terminal, always: the coder edits files)
+git -C ~/copilot-talk/03b-hierarchy reset -q --hard && git -C ~/copilot-talk/03b-hierarchy clean -fdq
+
+IF IT GOES WRONG
+A subagent doesn't start: its model isn't on your account. Edit the model field of
+that agent file in the project folder, using a name from the model picker.
+
+FALLBACK (images/ in the talk repo)
+demo3b-hierarchy.png, demo3b-hierarchy.gif

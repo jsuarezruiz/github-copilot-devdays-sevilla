@@ -1,0 +1,30 @@
+DEMO 8 · Canvas
+Project ~/copilot-talk/08-canvas · slides 28-30 · slot 2 min
+================================================================
+
+FILE TO SHOW
+.github/extensions/ui-test-plan/extension.mjs
+
+STEPS
+1. In the app, pick 08-canvas and press ⌘N.
+2. Accept the repository prompt with A, then press ⌘N again.
+3. Paste the prompt.
+4. Show both directions: click a case's status to change it, then type a new case in the
+   box and click Add.
+5. Do NOT press "Ask Copilot to run it": that is demo 9.
+
+PROMPT
+Open the UI test plan canvas with three cases for SampleApp: the greeting, the counter and the dark theme.
+
+YOU SHOULD SEE (about 17 s)
+A "UI test plan" panel on the right with three Pending cases and a blue
+"Ask Copilot to run it" button. A click on a status changes the counter (1 passed), and
+a typed case appears as case 4 after Add.
+
+FOLLOW-UP PROMPT (optional): the agent reads your changes
+How is the test plan going?
+
+FALLBACK (images/ in the talk repo)
+demo8-canvas.png, demo8-canvas.gif
+The capture also shows an avalonia_project_info call, made by the demo 7 extension.
+This folder has only the canvas, so that call won't happen live.

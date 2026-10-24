@@ -1,0 +1,18 @@
+{
+  "name": "devdays-sevilla",
+  "owner": {
+    "name": "Javier Suárez Ruiz"
+  },
+  "metadata": {
+    "description": "Plugin from the GitHub Copilot DevDays Sevilla talk on GitHub Copilot app extensibility.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "avalonia-kit",
+      "source": "./demos/10-plugin/avalonia-kit",
+      "description": "An AutomationId skill and a UI tester agent for Avalonia projects.",
+      "version": "0.1.0"
+    }
+  ]
+}

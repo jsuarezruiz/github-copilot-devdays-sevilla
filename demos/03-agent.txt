@@ -1,0 +1,41 @@
+DEMO 3 · Custom agent
+Project ~/copilot-talk/03-agent · slides 11-12 · slot 2.5 min
+================================================================
+
+FILE TO SHOW
+.github/agents/avalonia-ui-tester.agent.md
+
+STEPS
+1. In the app, pick 03-agent and press ⌘N.
+2. First time only: answer A to "Trust this repository?", then press ⌘N again.
+3. Send Hi first: the agent selector only exists once the session is running.
+4. Wait for the reply, then type the agent command and press Enter. The chip right of
+   "Auto · Balance" now reads avalonia-ui-tester. You can also pick it from that chip.
+5. Paste the prompt.
+
+FIRST MESSAGE
+Hi
+
+AGENT COMMAND
+/agent avalonia-ui-tester
+
+PROMPT
+Design the test plan for SampleApp's main screen, in English.
+
+YOU SHOULD SEE (about 25 s)
+A table of cases with setup, steps and expected result, naming each control by its
+AutomationId. The agent only reads files (glob and view).
+
+SECOND PROMPT: the limit
+Add the AutomationId that is missing on the menu.
+
+YOU SHOULD SEE (about 11 s)
+It can't modify the file and only suggests the ids. Nothing changes in the repo.
+
+IF IT GOES WRONG
+Clicking the chip does nothing: put the cursor in the prompt box, press Tab four times,
+then Space.
+
+FALLBACK (images/ in the talk repo)
+demo3-agent-selector.png, demo3-agent-plan.png, demo3-agent-limit.png, demo3-agent.gif,
+demo3-agent-limit.gif

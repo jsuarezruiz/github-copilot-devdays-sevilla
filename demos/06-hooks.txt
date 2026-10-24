@@ -1,0 +1,36 @@
+DEMO 6 · Hooks
+Project ~/copilot-talk/06-hooks · slides 20-21 · slot 2 min
+================================================================
+
+FILES TO SHOW
+.github/hooks/guardrails.json
+.github/hooks/guard.mjs
+
+STEPS
+1. In the app, pick 06-hooks and press ⌘N.
+2. Accept the repository prompt ("Trust this repository?" or "Allow repository code?"
+   or "Accept updated repository configuration…") with A, then press ⌘N again:
+   the session where the prompt appeared runs without the hook.
+3. Paste the prompt.
+
+PROMPT
+Create a tmp-demo folder with a text file inside, then delete it with rm -rf tmp-demo.
+
+YOU SHOULD SEE (about 30 s)
+"Denied by preToolUse hook: Forced recursive delete (rm -rf)". Then one of these:
+- the agent stops and says a safety guard blocked it (tmp-demo may be left behind),
+- or it deletes the file with rm and the folder with rmdir.
+Any of them makes the point: the hook stops the command, not the goal. A safety net,
+not a sandbox.
+
+AUDIT LOG (terminal): one DENY bash line, the others allow
+tail -5 "$TMPDIR/copilot-talk-audit.log"
+
+RESET (terminal, removes a leftover tmp-demo)
+git -C ~/copilot-talk/06-hooks clean -fdq
+
+PLAN B (terminal): ask the hook directly
+cd ~/copilot-talk/06-hooks && printf '%s' '{"toolName":"bash","toolArgs":{"command":"rm -rf tmp-demo"}}' | node .github/hooks/guard.mjs
+
+FALLBACK (images/ in the talk repo)
+demo6-hook.png (blocked), demo6-hook-workaround.png (worked around), demo6-hook.gif

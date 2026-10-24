@@ -1,0 +1,12 @@
+{
+  "name": "avalonia-kit",
+  "description": "An AutomationId skill and a UI tester agent for Avalonia projects.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Javier Suárez Ruiz"
+  },
+  "license": "MIT",
+  "keywords": ["avalonia", "dotnet", "ui-testing"],
+  "agents": "agents/",
+  "skills": "skills/"
+}
