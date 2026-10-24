@@ -15,10 +15,12 @@ PROMPT
 What rules should I follow when I change the UI in this repo? Answer in at most five short bullets. If the repo states no rules, say so.
 
 YOU SHOULD SEE (about 25 s)
-The team's rules: every interactive control has Name and a matching
-AutomationProperties.AutomationId, PascalCase ids that end with the control type,
-never change an existing AutomationId, visible text in English, and
-dotnet build src/SampleApp/SampleApp.csproj after a change.
+The team's rules, led by what demo 0 could not guess: PascalCase ids that end
+with the control type (GreetButton, NameBox), never change an existing
+AutomationId, visible text in English, and dotnet build
+src/SampleApp/SampleApp.csproj after a change. Also: every interactive control
+has Name and a matching AutomationProperties.AutomationId. Demo 0 may have
+hinted at that one from the docs, but only here is it a rule.
 
 OPTIONAL SECOND PROMPT: the Clear button
 Add a Clear button to SampleApp that empties the name and the greeting. Check that it works.
