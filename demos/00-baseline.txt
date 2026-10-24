@@ -8,7 +8,7 @@ STEPS
 3. Paste the prompt. If the agent asks to run a command that lists files, press Enter.
 
 PROMPT
-What rules should I follow when I change the UI in this repo? Answer in at most five short bullets.
+What rules should I follow when I change the UI in this repo? Answer in at most five short bullets. If the repo states no rules, say so.
 
 YOU SHOULD SEE (about 40 s)
 "There are no UI-specific rules in this repo", then generic advice taken from the
