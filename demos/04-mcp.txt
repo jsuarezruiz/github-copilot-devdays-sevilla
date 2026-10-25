@@ -1,6 +1,7 @@
 DEMO 4 · MCP server
 Project ~/copilot-talk/04-mcp · slides 16-17 · slot 2 min
 ================================================================
+MODEL: local (qwen3.6:35b, effort None) or Auto.
 
 FILES TO SHOW
 .mcp.json

@@ -1,6 +1,7 @@
 DEMO 10 · Plugin
 Project ~/copilot-talk/00-baseline (it has no skill and no agent) · slides 36-37 · slot 3 min
 ================================================================
+MODEL: local (qwen3.6:35b, effort None) or Auto.
 
 FILES TO SHOW (in the talk repo)
 demos/10-plugin/avalonia-kit/plugin.json

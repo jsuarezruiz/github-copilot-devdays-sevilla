@@ -1,6 +1,7 @@
 DEMO 5 · Language server
 Project ~/copilot-talk/05-lsp · slides 18-19 · slot 1.5 min
 ================================================================
+MODEL: local (qwen3.6:35b, effort None) or Auto.
 
 FILE TO SHOW
 .github/lsp.json

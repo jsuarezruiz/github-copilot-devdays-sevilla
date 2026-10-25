@@ -1,6 +1,7 @@
 DEMO 0 · The starting point, nothing customized
 Project ~/copilot-talk/00-baseline · slide 6 · slot 2 min
 ================================================================
+MODEL: local (qwen3.6:35b, effort None) or Auto. Local takes about 2 min.
 
 STEPS
 1. In the app, pick 00-baseline and press ⌘N.

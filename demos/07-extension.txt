@@ -1,6 +1,7 @@
 DEMO 7 · SDK extension
 Project ~/copilot-talk/07-extension · slides 22-25 · slot 1.5 min
 ================================================================
+MODEL: local (qwen3.6:35b, effort None) or Auto.
 
 FILE TO SHOW
 .github/extensions/avalonia-tools/extension.mjs

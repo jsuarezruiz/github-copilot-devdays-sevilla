@@ -1,6 +1,7 @@
 DEMO 6 · Hooks
 Project ~/copilot-talk/06-hooks · slides 20-21 · slot 2 min
 ================================================================
+MODEL: local (qwen3.6:35b, effort None) or Auto.
 
 FILES TO SHOW
 .github/hooks/guardrails.json

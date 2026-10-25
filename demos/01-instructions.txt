@@ -1,6 +1,7 @@
 DEMO 1 · Instructions
 Project ~/copilot-talk/01-instructions · slides 7-8 · slot 2 min
 ================================================================
+MODEL: local (qwen3.6:35b, effort None) or Auto.
 
 FILES TO SHOW
 .github/copilot-instructions.md

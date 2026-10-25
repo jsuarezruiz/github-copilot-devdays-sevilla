@@ -1,6 +1,7 @@
 DEMO 3 · Custom agent
 Project ~/copilot-talk/03-agent · slides 11-12 · slot 2.5 min
 ================================================================
+MODEL: plan prompt: local (effort None) or Auto. Limit prompt: Auto only.
 
 FILE TO SHOW
 .github/agents/avalonia-ui-tester.agent.md
@@ -31,6 +32,8 @@ Add the AutomationId that is missing on the menu.
 
 YOU SHOULD SEE (about 11 s)
 It can't modify the file and only suggests the ids. Nothing changes in the repo.
+The answer may list only some of the five menu items without an id (File, Exit,
+View, Light theme, Dark theme). Run to run it names two to five of them.
 
 IF IT GOES WRONG
 Clicking the chip does nothing: put the cursor in the prompt box, press Tab four times,

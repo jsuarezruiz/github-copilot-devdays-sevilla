@@ -1,6 +1,7 @@
 DEMO 7B · Multi-model workflow
 Project ~/copilot-talk/07b-workflow · slides 26-27 · slot 3 min
 ================================================================
+MODEL: Auto only. The agents and the escalation step pin hosted models (gpt-6-luna).
 
 FILES TO SHOW
 .github/extensions/plan-code-review/extension.mjs

@@ -1,6 +1,7 @@
 DEMO 2 · Skill
 Project ~/copilot-talk/02-skill · slides 9-10 · slot 2 min
 ================================================================
+MODEL: local (qwen3.6:35b, effort None) or Auto.
 
 FILE TO SHOW
 .github/skills/avalonia-automation-ids/SKILL.md

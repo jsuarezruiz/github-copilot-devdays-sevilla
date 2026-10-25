@@ -1,6 +1,7 @@
 DEMO 8 · Canvas
 Project ~/copilot-talk/08-canvas · slides 28-30 · slot 2 min
 ================================================================
+MODEL: local (qwen3.6:35b, effort None) or Auto.
 
 FILE TO SHOW
 .github/extensions/ui-test-plan/extension.mjs

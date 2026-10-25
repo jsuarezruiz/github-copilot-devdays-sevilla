@@ -1,6 +1,7 @@
 DEMO 3B · One model per role
 Project ~/copilot-talk/03b-hierarchy · slides 13-15 · slot 3 min
 ================================================================
+MODEL: Auto only. The agents pin claude-sonnet-5.5, gpt-5.3-codex and gemini-3.8-flash.
 
 FILES TO SHOW
 .github/agents/orchestrator.agent.md

@@ -1,6 +1,7 @@
 DEMO 9 · The agent drives a desktop app
 Project ~/copilot-talk/09-real-canvas · slides 31-35 · slot 3 min
 ================================================================
+MODEL: Auto. Many chained tool calls; show the images if Auto is unavailable.
 
 FILES TO SHOW
 .github/extensions/copilot-avalonia/   (the real canvas, from copilot-avalonia)
