@@ -6,6 +6,11 @@ Slides and demos from the talk **Extensibilidad de GitHub Copilot App** (in Span
 
 The talk walks through nine extension points of GitHub Copilot app, each with a small live demo on the same sample app, [copilot-avalonia](https://github.com/jsuarezruiz/copilot-avalonia). The sample uses Avalonia, but none of the pieces depend on it.
 
+## Slides
+
+- [`github-copilot-app-extensibility.pptx`](github-copilot-app-extensibility.pptx): English slides and speaker notes.
+- [`github-copilot-app-extensibility.es.pptx`](github-copilot-app-extensibility.es.pptx): Spanish slides and speaker notes. Code, prompts and commands stay in English in both.
+
 ## What's inside
 
 Each folder in `demos/` holds the files of one demo, where they go in a repo. Next to it, a `.txt` has the prompts to paste, the commands to run and what you should see. A demo folder has only its own piece, so nothing in one demo comes from another.
